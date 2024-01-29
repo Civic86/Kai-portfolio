@@ -50,7 +50,7 @@ export default function Home() {
               title="Cocoon"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
               href="/project1"
-              imageUrl="/Logo.png"
+              imageUrl="/images/Logo.png"
             />
             <ProjectCard
               title="Product Name"
