@@ -13,7 +13,7 @@ const ProjectCard: React.FC<ProjectCardProps> = ({ title, description, imageUrl,
   return (
     <div className="grid grid-cols-1 md:grid-cols-2 bg-yellow-100 rounded-lg overflow-hidden shadow-lg">
       <Link href={href} passHref>
-        <div className="cursor-pointer">
+        <div className="cursor-pointer flex justify-center items-center">
           <Image src={imageUrl} alt={title} width={700} height={1} objectFit="cover" />
         </div>
       </Link>

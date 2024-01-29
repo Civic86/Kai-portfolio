@@ -15,7 +15,10 @@ export default function Home() {
 
       <main className="bg-yellow-50 min-h-screen p-8">
         <section className="text-center">
-          <div className="circle bg-white rounded-full h-64 w-64 block mx-auto mb-8"></div>
+          <div
+            className="circle bg-white rounded-full h-64 w-64 block mx-auto mb-8"
+            style={{ backgroundImage: `url('/Kai.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          ></div>
           <h1 className="text-5xl font-bold  mb-40 text-green-400">Hello! This is Kai!</h1>
         </section>
 
@@ -25,8 +28,8 @@ export default function Home() {
             <ProjectCard
               title="Cocoon"
               description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-              href="/project1"
-              imageUrl="/logo.png"
+              href="/cocoon"
+              imageUrl="/cocoon.png"
             />
             <ProjectCard
               title="Product Name"
@@ -58,6 +61,13 @@ export default function Home() {
               href="/project1"
               imageUrl=""
             />
+          </div>
+        </section>
+
+        <section className="mt-32">
+          <h2 className="text-7xl font-bold mb-6 text-green-400">Contact.</h2>
+          <div>
+            <p>coming soon</p>
           </div>
         </section>
 
