@@ -55,7 +55,7 @@ export default function Home() {
             </div>
           </div>
 
-          <div className="mt-40 text-center">
+          <div className="mt-20 text-center">
             <Link href="/work">
               <span className="text-indigo-600 hover:text-indigo-900 cursor-pointer">See more</span>
             </Link>
