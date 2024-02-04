@@ -18,7 +18,7 @@ type Props = {
 export const FadeInBottom: React.FC<Props> = ({ children }) => {
   const { ref, inView } = useInView({
     // ref要素が現れてから50px過ぎたら
-    rootMargin: "-50px",
+    rootMargin: "-300px",
     // 最初の一度だけ実行
     triggerOnce: true,
   });

@@ -2,8 +2,8 @@ import React from 'react';
 
 const ArrowInCircle: React.FC = () => {
   return (
-    <div className="w-32 h-32 relative">
-      <div className="rounded-full w-full h-full bg-blue-500 flex items-center justify-center">
+    <div className="w-16 h-16 relative">
+      <div className="rounded-full w-full h-full bg-[#062438] flex items-center justify-center">
         <svg
           className="text-white w-16 h-16"
           fill="none"

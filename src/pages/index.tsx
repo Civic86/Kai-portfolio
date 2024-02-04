@@ -8,6 +8,11 @@ import ImageCarousel from '@/components/ImageCarousel'
 import { FadeInBottom } from '@/components/FadeInBottom'
 import Contact from '@/components/Contact'
 import ArrowInCircle from '@/components/arrow'
+// import { IOptions, RecursivePartial } from 'tsparticles';
+// import ParticlesParams from '../assets/particlesjs-config.json';
+// import Particles from 'react-particles-js';
+
+
 
 const images = [
   '/Kai.jpg',
@@ -20,6 +25,10 @@ const images = [
 export default function Home() {
   return (
     <>
+      {/* <Particles
+        className="position-absolute width-100% height-100%"
+        params={ParticlesParams as RecursivePartial<IOptions>}
+      /> */}
       <Head>
         <title>Kai's Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -41,27 +50,30 @@ export default function Home() {
           <h1 className="text-5xl font-bold  mb-20 text-[#062438]">Hello! This is Kai!</h1>
         </section>
 
-        <div className="flex justify-center items-center animate-bounce animate-infinite mb-10">
+        <div className="flex justify-center items-center animate-bounce animate-infinite mb-20">
         <ArrowInCircle />
       </div>
 
-        <section className="mt-1">
+        <section className="mt-10">
           <h2 className="text-7xl font-bold mb-20 text-[#062438] animate-fade-down animate-once">Work.</h2>
           <div className="flex justify-center">
             <FadeInBottom>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
                   <Card
                     title="Cocoon"
+                    skill=''
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
                     imageUrl="/cocoon.png"
                   />
                   <Card
                     title="Cocoon"
+                    skill=''
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
                     imageUrl="/cocoon.png"
                   />
                   <Card
                     title="Cocoon"
+                    skill=''
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
                     imageUrl="/cocoon.png"
                   />
@@ -84,6 +96,7 @@ export default function Home() {
               <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <Card
                   title="Cocoon"
+                  skill=''
                   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
                   imageUrl="/cocoon.png"
                 />

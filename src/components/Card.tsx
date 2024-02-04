@@ -6,15 +6,17 @@ interface CardProps {
   imageUrl: string;
   title: string;
   description: string;
+  skill: string;
 }
 
-const Card: React.FC<CardProps> = ({ imageUrl, title, description }) => {
+const Card: React.FC<CardProps> = ({ imageUrl, title, skill, description }) => {
   return (
     <Link href="/cocoon">
       <div className="max-w-[400px] rounded overflow-hidden shadow-lg hover:scale-105 hover:shadow-xl transition-transform duration-300">
         <Image src={imageUrl} alt={title} width={400} height={250} objectFit="cover" className="w-full h-[250px] object-cover bg-blue-100" />
         <div className="px-6 py-4 bg-white">
           <div className="font-bold text-xl mb-2 text-black">{title}</div>
+          <p className="text-gray-500">{skill}</p>
           <p className="text-base text-gray-500">
             {description}
           </p>
