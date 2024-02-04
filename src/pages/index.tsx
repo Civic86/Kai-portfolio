@@ -5,11 +5,15 @@ import NavBar from '@/components/NavBar'
 import Card from '@/components/Card'
 import TopBar from '@/components/TopBar'
 import ImageCarousel from '@/components/ImageCarousel'
+import { FadeInBottom } from '@/components/FadeInBottom'
+import Contact from '@/components/Contact'
+import ArrowInCircle from '@/components/arrow'
+
 const images = [
-  '/cocoon.png',
-  '/cocoon-app.png',
   '/Kai.jpg',
-  // 他の画像を追加することもできます
+  '/cocoon-app.png',
+  '/cocoon.png',
+  // Add more image paths
 ];
 
 
@@ -23,36 +27,46 @@ export default function Home() {
 
       <TopBar />
       <NavBar />
-      <ImageCarousel/>
+      <div className="container mx-auto px-4">
+        {/* <div className="bg-white w-100%">
+          <ImageCarousel images={images} />
+        </div> */}
+      </div>
       <main className="bg-white min-h-screen p-8">
         <section className="text-center">
           <div
-            className="circle bg-white rounded-full h-64 w-64 block mx-auto mb-8"
+            className="circle bg-white rounded-full h-64 w-64 block mx-auto mb-8 animate-rotate-y"
             style={{ backgroundImage: `url('/Kai.jpg')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
           ></div>
-          <h1 className="text-5xl font-bold  mb-40 text-[#062438]">Hello! This is Kai!</h1>
+          <h1 className="text-5xl font-bold  mb-20 text-[#062438]">Hello! This is Kai!</h1>
         </section>
 
+        <div className="flex justify-center items-center animate-bounce animate-infinite mb-10">
+        <ArrowInCircle />
+      </div>
+
         <section className="mt-1">
-          <h2 className="text-7xl font-bold mb-20 text-[#062438]">Work.</h2>
+          <h2 className="text-7xl font-bold mb-20 text-[#062438] animate-fade-down animate-once">Work.</h2>
           <div className="flex justify-center">
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-              <Card
-                title="Cocoon"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                imageUrl="/cocoon.png"
-              />
-              <Card
-                title="Cocoon"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                imageUrl="/cocoon.png"
-              />
-              <Card
-                title="Cocoon"
-                description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                imageUrl="/cocoon.png"
-              />
-            </div>
+            <FadeInBottom>
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
+                  <Card
+                    title="Cocoon"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
+                    imageUrl="/cocoon.png"
+                  />
+                  <Card
+                    title="Cocoon"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
+                    imageUrl="/cocoon.png"
+                  />
+                  <Card
+                    title="Cocoon"
+                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
+                    imageUrl="/cocoon.png"
+                  />
+                </div>
+            </FadeInBottom>
           </div>
 
           <div className="mt-20 text-center">
@@ -63,36 +77,36 @@ export default function Home() {
         </section>
 
 
-        <section className="mt-32">
-          <h2 className="text-7xl font-bold mb-6 text-[#062438]">Case Study.</h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <ProjectCard
-              title="Cocoon"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-              href="/project1"
-              imageUrl="/logo.png"
-            />
-            <ProjectCard
-              title="Product Name"
-              description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-              href="/project1"
-              imageUrl=""
-            />
+        <section className="mt-20">
+          <h2 className="text-7xl font-bold mb-20 text-[#062438] animate-fade-down animate-once">Case Study.</h2>
+          <div className="flex justify-center">
+            <FadeInBottom>
+              <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+                <Card
+                  title="Cocoon"
+                  description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
+                  imageUrl="/cocoon.png"
+                />
+              </div>
+            </FadeInBottom>
           </div>
         </section>
 
         <section className="mt-32">
-          <h2 className="text-7xl font-bold mb-6 text-[#062438]">Contact.</h2>
-          <div>
-            <p>coming soon</p>
-          </div>
+          <FadeInBottom>
+            <h2 className="text-7xl font-bold mb-6 text-[#062438]">Contact.</h2>
+          </FadeInBottom>
+          <Contact />
         </section>
 
       </main>
 
-      <footer className="bg-yellow-100 text-center p-6">
-        <p className="text-yellow-900">© 2024 Kai's Portfolio</p>
+      <footer className="bg-[#062438] text-center p-6">
+        <p className="text-gray-400">© 2024 Kai's Portfolio</p>
       </footer>
     </>
   )
 }
+
+
+

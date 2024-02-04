@@ -1,31 +1,41 @@
 import { useState, useEffect } from 'react';
 
-const ImageCarousel: React.FC = () => {
-  const [images, setImages] = useState<string[]>([]);
+interface ImageCarouselProps {
+  images: string[];
+}
+
+const ImageCarousel: React.FC<ImageCarouselProps> = ({ images }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   useEffect(() => {
-    // Fetch images from an API or set them manually
-    const fetchedImages = ['/Kai.jpg', '/cocoon.png', '/cocoon-app.png'];
-    setImages(fetchedImages);
-
-    // Automatically slide the image every 5 seconds
     const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % fetchedImages.length);
-    }, 5000);
+      setCurrentIndex((currentIndex) => (currentIndex + 1) % images.length);
+    }, 3000); // Change image every 3 seconds
 
     return () => clearInterval(interval);
-  }, []);
+  }, [images.length]);
+
+  const nextSlide = () => {
+    setCurrentIndex((currentIndex + 1) % images.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentIndex((currentIndex - 1 + images.length) % images.length);
+  };
 
   return (
-    <div className="w-full h-400px flex items-center justify-center">
-      <div style={{ height: '500px', width: '100%' }}>
-        <img
-          src={images[currentIndex]}
-          alt="Carousel Image"
-          className="object-cover w-full h-full"
-        />
+    <div className="relative overflow-hidden bg-white h-96 w-full">
+      <div className="flex transition-all duration-700 ease-in-out bg-white" style={{ transform: `translateX(-${currentIndex * 100}%)` }}>
+        {images.map((image, index) => (
+          <img key={index} src={image} alt={`Slide ${index}`} className="block w-full h-auto object-cover" />
+        ))}
       </div>
+      <button onClick={prevSlide} className="absolute left-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+        &#9664;
+      </button>
+      <button onClick={nextSlide} className="absolute right-0 top-1/2 -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full">
+        &#9654;
+      </button>
     </div>
   );
 };
