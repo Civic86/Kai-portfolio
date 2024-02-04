@@ -60,22 +60,25 @@ export default function Home() {
             <FadeInBottom>
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-14">
                   <Card
+                  href="/cocoon"
                     title="Cocoon"
                     skill=''
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                    imageUrl="/cocoon.png"
+                    imageUrl="/cocoonLogo.png"
                   />
                   <Card
-                    title="Cocoon"
+                    href="/max"
+                    title="Max Verstappen Poster"
                     skill=''
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                    imageUrl="/cocoon.png"
+                    imageUrl="/MaxF1.png"
                   />
                   <Card
+                  href='/cocoon'
                     title="Cocoon"
                     skill=''
                     description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                    imageUrl="/cocoon.png"
+                    imageUrl="/cocoonLogo.png"
                   />
                 </div>
             </FadeInBottom>
@@ -95,6 +98,7 @@ export default function Home() {
             <FadeInBottom>
               <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
                 <Card
+                href='/cocoon'
                   title="Cocoon"
                   skill=''
                   description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
