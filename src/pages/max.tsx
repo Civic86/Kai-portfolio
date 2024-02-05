@@ -18,10 +18,7 @@ export default function Max() {
           <div className="flex-1 md:ml-20">
             <div className="max-w-xl">
               <h2 className="text-7xl font-bold mb-10 mt-20 text-[#062438]">Max Verstappen Poster made by Photoshop</h2>
-              <p className="text-gray-500 max-w-xl">cocoon is a completely new form of AI-powered career advisor for all busy but new career-seeking users.
-                <br />
-                <br />
-                cocoon reads a user's resume and shows them the possibilities for the new career they desire. Even if the user wants to find a job unrelated to his or her previous job, cocoon will present the best path for the user.</p>
+              <p className="text-gray-500 max-w-xl">Designed a digital poster using photoshop. I did everything myself, from cropping the images to color blending, creating effects and vector graphics, and was satisfied with the work both visually and in terms of my skills.</p>
             </div>
           </div>
           <div className="flex justify-center items-center mt-20 md: mr-60">

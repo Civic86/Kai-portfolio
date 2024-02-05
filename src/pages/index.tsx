@@ -63,22 +63,22 @@ export default function Home() {
                   href="/cocoon"
                     title="Cocoon"
                     skill=''
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
+                  description="Front-end design and design of a new career choice application for the new era using AI"
                     imageUrl="/cocoonLogo.png"
                   />
                   <Card
                     href="/max"
                     title="Max Verstappen Poster"
                     skill=''
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
+                  description="Poster work using image composition, editing, and effect generation in Photoshop"
                     imageUrl="/MaxF1.png"
                   />
                   <Card
-                  href='/cocoon'
-                    title="Cocoon"
+                  href='/tradeSquare'
+                    title="TradeSquare"
                     skill=''
-                    description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet vulputate tristique quam felis..."
-                    imageUrl="/cocoonLogo.png"
+                  description="Design by Figma for a barter application for the web"
+                    imageUrl="/TradeSquare.png"
                   />
                 </div>
             </FadeInBottom>
@@ -109,12 +109,12 @@ export default function Home() {
           </div>
         </section>
 
-        <section className="mt-32">
+        {/* <section className="mt-32">
           <FadeInBottom>
             <h2 className="text-7xl font-bold mb-6 text-[#062438]">Contact.</h2>
           </FadeInBottom>
           <Contact />
-        </section>
+        </section> */}
 
       </main>
 

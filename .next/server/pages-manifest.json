@@ -2,8 +2,8 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/work": "pages/work.js",
+  "/cocoon": "pages/cocoon.js",
   "/max": "pages/max.js",
-  "/": "pages/index.js",
-  "/cocoon": "pages/cocoon.js"
+  "/tradeSquare": "pages/tradeSquare.js",
+  "/": "pages/index.js"
 }
